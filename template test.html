@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<style>
+    .container{
+        /* border: 2px solid white; */
+        width: auto;
+        height: 350px;
+        margin-top: 125px;
+        
+    }
+    .item{
+        width: 150px;
+        height: 150px;
+        background-color: #fb7185;
+        padding: 1em;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+        border: 5px solid green;
+        border-radius: 10px;
+    }
+    .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        align-items: center;
+        /* flex-wrap: wrap;
+        align-content: flex-start;
+        gap: 1em; */
+        
+    }
+    @keyframes fadeIn {
+        from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    }
+    .item-2{
+        align-self: center;
+        border-style: none;
+        border-radius: 50%;
+        background-image: url(pfp.jpg);
+        background-size: cover;
+        background-position-x: center;
+    }
+    .item-1{
+        opacity: 0;
+        
+    }
+    .item-3{
+        opacity: 0;
+    }
+
+    @media (max-width: 767px) {
+    .item-2 {
+        width: 120%;
+        /* padding-bottom: 80%; */
+    }
+}
+    .intro{
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        /* text-wrap: wrap; */
+        margin-left: 50px;
+        margin-right: 50px;
+        overflow: hidden;
+        text-wrap: wrap;
+    }
+    .techstack{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1em;
+        
+    }
+
+    .sub{
+        width: 150px;
+        height: 150px;
+        /* background-color: #fb7185; */
+        padding: 1em;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+        border-style: none;
+        
+    }
+    .sub-1{
+        background-image: url(html.png);
+        background-size: cover;
+    }
+    .sub-2{
+        background-image: url(cssnobg.png);
+        background-size: cover;
+        background-position-y: center;
+    }
+    .sub-3{
+        background-image: url(jsnobg.png);
+        background-size: cover;
+    }
+    .project{
+        /* background-color: red; */
+        width: 750px;
+        
+        height: 500px;
+        /* background-color: #fb7185; */
+        /* padding: 1em; */
+        font-weight: 700;
+        color: white;
+        text-align: center;
+        border: 0.5px solid white;
+        /* border-radius: 10px; */
+        flex-grow: 0;
+        transition: transform .2s;
+        
+    }
+
+    
+
+
+
+
+
+
+
+    .project-1{
+        background-image: url(payment.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: transform .2s;
+    }
+    .project-1:hover{
+        transform: scale(1.1);
+    }
+    .project-2{
+        background-image: url(neural.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .project-2:hover{
+        transform: scale(1.1);
+    }
+    .project-3{
+        background-image: url(cleancode.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .project-3:hover{
+        transform: scale(1.1);
+    }
+    .project-4{
+        background-image: url(hacking.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .project-4:hover{
+        transform: scale(1.1);
+    }
+    .project-5{
+        background-image: url(linux.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .project-5:hover{
+        transform: scale(1.1);
+    }
+    .project-6{
+        background-image: url(vscode.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .project-6:hover{
+        transform: scale(1.1);
+    }
+    
+    @media(max-width: 767px){
+        .project-1{
+            background-size: cover;
+            height: 220px;
+            
+        }
+        .project-2{
+            background-size: cover;
+            height: 220px; 
+        }
+        .project-3{
+            background-size: cover;
+            height: 220px; 
+        }
+        .project-4{
+            background-size: cover;
+            height: 220px; 
+        }
+        .project-5{
+            background-size: cover;
+            height: 220px; 
+        }
+        .project-6{
+            background-size: cover;
+            height: 220px; 
+        }
+        .collapsible{
+            display: flex;
+            align-items: flex-start;
+        }
+    }
+    .skil1{
+        margin-top: 50px;
+    }
+    .text{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-color:white;
+        color: black;
+    }
+
+    .contact{
+        /* background-color: blue; */
+        height: auto;
+        width: 480px;
+        text-align: center;
+        color: white;
+        font-size: 35px;
+        overflow:hidden;
+        text-wrap: wrap;
+    }
+    .contact-1{
+        width: 60px;
+        height:60px;
+        background-image: url(mailnobg.png);
+        background-size: cover;
+        transition: transform .2s;
+    }
+    .contact-1:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+    .contact-2{
+        width: 60px;
+        height:60px;
+        background-image: url(callnobg.png);
+        background-size: cover;
+        transition: transform .2s;
+    }
+    .contact-2:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+    
+</style>
+<body style="background-color: #191b1b;animation: fadeIn 1s ease-in-out forwards;">
+   <div class="container">
+    <div class="item item-1"></div>
+    <div class="item item-2"></div>
+    <div class="item item-3"></div>
+    
+   </div>
+   <br>
+   <div class="intro">Hi! I'm Josh, a 23 year old front end web developer,</div>
+   <div class="intro">Making tech easy for you, one step at a time.</div>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <div class="intro">My Tech Stack is</div>
+   <br>
+   <div class="techstack">
+    <div class="sub sub-1"></div>
+    <div class="sub sub-2"></div>
+    <div class="sub sub-3"></div>
+   </div>
+   <br>
+   <br>
+   <br>
+   <br>
+   <div class="intro"><p style="text-wrap: wrap;text-align: center;">Some of my projects are</p></div>
+   <br>
+   <br>
+   <div class="techstack">
+        <div class="project project-1">
+            <div class="text">Made a Payment Gateway System</div>
+            
+        </div>
+            
+        <div class="project project-2">
+            <div class="text">Made a Nueral Network</div>
+        </div>
+   </div>
+   
+   <!-- <p style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 20px;">Made Neural Network</p> -->
+
+   <br>
+   <br>
+   <br>
+   <br>
+   <div class="intro"><p style="text-wrap: wrap;text-align: center;">General Skills</p></div>
+   <br>
+   <br>
+   <div class="techstack">
+        <div class="project project-3">
+            <div class="text">I write clean code</div>
+            
+        </div>
+            
+        <div class="project project-4">
+            <div class="text">Knows some hacking as well</div>
+        </div>
+
+        <div class="project project-5">
+            <div class="text">Proficient at Linux Customisation</div>
+        </div>
+
+        <div class="project project-6">
+            <div class="text">Proficient with tools such as VsCode</div>
+        </div>
+   </div>
+   <br>
+   <div class="intro"><p style="text-wrap: wrap;text-align: center;">Contact me Via</p></div>
+   <br>
+   <div class="techstack">
+    <div class="contact contact-1">
+        
+    </div>
+    <div class="contact contact-2">
+        
+    </div>
+   </div>
+   
+
+</body>
+</html>
